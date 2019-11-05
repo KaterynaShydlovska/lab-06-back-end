@@ -13,10 +13,25 @@ const app = express();
 // Global vars
 const PORT = process.env.PORT || 3000;
 
-app.get('/data', (request, response) => {
-  response.send('Hello you all');
-});
+// app.get('/', (request, response) => {
+//   response.send('Hello you all');
+// });
 // app.use(cors());
+
+app.get('/location', (request, response) => {
+  // send the users current location back to them
+  const geoData = require('./data/geo.json');
+  const city = request.query.data;
+  const locationData = new Location(city, geoData);
+  response.send(locationData);
+});
+
+function Location(city, geoData) {
+  this.search_query = city;
+  this.formatted_query = geoData.results[0].formatted_address;
+  this.latitude = geoData.results[0].geometry.location.lat;
+  this.longitude = geoData.results[0].geometry.location.lng;
+}
 
 app.listen(PORT, () => {
   console.log(`listening on PORT ${PORT}`);
