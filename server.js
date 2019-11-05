@@ -21,9 +21,14 @@ app.get('/location', (request, response) => {
   // send the users current location back to them
   const geoData = require('./data/geo.json');
   const city = request.query.data;
+  const cityName = geoData.results[0].address_components[0].long_name;
   console.log('LOCATION END POINT REACHED')
-  const locationData = new Location(city, geoData);
-  response.send(locationData);
+  if (cityName === city) {
+    const locationData = new Location(city, geoData);
+    response.send(locationData); 
+  } else {
+    response.send('500: Internal Server Error', 500); 
+  }
 });
 
 function Location(city, geoData) {

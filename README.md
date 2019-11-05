@@ -6,19 +6,32 @@
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+We started create back end for City Explorer which can give you information about location, weather and some cool staff of different cities.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1. Repository Set Up
+2. Locations: As a user of City Explorer, I want to enter the name of a location so that I can see data about the area of interest to me.
+3. Weather: As a user, I want to request current weather information so that I can learn more about the typical weather patterns in the location I had entered.
+4. Errors: As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+we are using for back end part JS, JQuery
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource.
+modified serverJS
+@KaterynaShydlovska
+KaterynaShydlovska committed 4 hours ago
+created files
+@KaterynaShydlovska
+KaterynaShydlovska committed 4 hours ago
+Update README.md
+@KaterynaShydlovska
+KaterynaShydlovska committed 5 hours ago
+Initial commit
+@KaterynaShydlovska
+KaterynaShydlovska committed 5 hours ago
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+github.com/lrodriguezjb
+Leandro Rodriguez
 -->
